@@ -1,0 +1,5 @@
+! Card for KcsA (1BL8) with potassium ions removed
+coord 1bl8-no-K.pdb          	! Co-ordinates in pdb format
+radius ~/hole2/rad/simple.rad	! Use simple AMBER vdw radii
+sphpdb hole-kcsa.sph            ! pdb format output of hole sphere centre info
+endrad 10.						! This is the pore radius that is taken as where the channel ends
