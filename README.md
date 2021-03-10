@@ -29,10 +29,8 @@ sphpdb hole-kcsa.sph            ! pdb format output of hole sphere centre info
 endrad 10.                      ! This is the pore radius that is taken as where the channel ends
 ```
 2. Run HOLE. <br />
-```
-hole < hole-kcsa.inp > hole-kcsa.log
-sph_process -dotden 15 -color -nocen hole-kcsa.sph dotsurface-kcsa.qpt
-```
+`hole < hole-kcsa.inp > hole-kcsa.log` <br />
+`sph_process -dotden 15 -color -nocen hole-kcsa.sph dotsurface-kcsa.qpt` <br />
 3. Run qpt_conv interactively to convert the .qpt file to a .vmd file. When prompted choose VMD format by entering `D` at the command line. Use defaults for the other prompts. The output file will be called `dotsurface-kcsa.vmd_plot`. <br />
 `qpt_conv`
 4. Run the holecmm.py script to generate a .cmm file. In this example custom colors are used for the different pore diameters. <br />
