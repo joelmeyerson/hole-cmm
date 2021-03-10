@@ -20,7 +20,7 @@ A short Python script to generate a Chimera marker file (.cmm) using the output 
 This example uses the KcsA structure (PDB: 1BL8) but with the potassium ions removed.
 
 1. Download HOLE.
-2. Create a HOLE card with the input settings. These are the contents of `hole-kcsa.inp`.
+2. Create a HOLE card with the input settings. These are the contents of `hole-kcsa.inp`. <br />
 ```
 ! Card for KcsA (1BL8) with potassium ions removed
 coord 1bl8-no-K.pdb          	! Co-ordinates in pdb format
@@ -28,12 +28,12 @@ radius ~/hole2/rad/simple.rad	! Use simple AMBER vdw radii
 sphpdb hole-kcsa.sph            ! pdb format output of hole sphere centre info
 endrad 10.                      ! This is the pore radius that is taken as where the channel ends
 ```
-3. Run HOLE.
+3. Run HOLE. <br />
 `hole < hole-kcsa.inp > hole-kcsa.log`
 `sph_process -dotden 15 -color -nocen hole-kcsa.sph dotsurface-kcsa.qpt`
-4. Run qpt_conv interactively to convert the .qpt file to a .vmd file. When prompted choose VMD format by entering `D` at the command line. Use defaults for the other prompts. The output file will be called `dotsurface-kcsa.vmd_plot'.
+4. Run qpt_conv interactively to convert the .qpt file to a .vmd file. When prompted choose VMD format by entering `D` at the command line. Use defaults for the other prompts. The output file will be called `dotsurface-kcsa.vmd_plot'. <br />
 `qpt_conv`
-5. Run the holecmm.py script to generate a .cmm file. In this example custom colors are used for the different pore diameters. 
+5. Run the holecmm.py script to generate a .cmm file. In this example custom colors are used for the different pore diameters. <br />
 `python holecmm.py -i dotsurface-kcsa.vmd_plot -o kcsa.cmm -r 0.2 -c1 FF6347 -c2 90EE90 -c3 6495ED`
 
 ### Example using HOLE in Coot
@@ -41,14 +41,14 @@ endrad 10.                      ! This is the pore radius that is taken as where
 This example uses the KcsA structure (PDB: 1BL8) but with the potassium ions removed.
 
 1. Launch Coot and open the PDB file.
-2. Open the HOLE dialog box from the menu.
+2. Open the HOLE dialog box from the menu. <br />
 `Draw > Representation Tools... > HOLE...`
 3. Select the residue where the HOLE calculation should start. This can be done by middle clicking on a residue, or by using the `Go To Atom...` dialog box.
 4. Click the `Set Start Point` button in the HOLE dialog box.
 5. Select the residue where the HOLE calculation should end.
 6. Click the `Set End Point` button in the HOLE dialog box.
 7. Click the `Calculate` button. This will generate an output file called `hole-surface-dots.dat`.
-8. Run the holecmm.py script to generate a .cmm file. This example uses the colors from the .dat file.
+8. Run the holecmm.py script to generate a .cmm file. This example uses the colors from the .dat file. <br />
 `python holecmm.py -i hole-surface-dots.dat`
-9. You can also use custom colors.
+9. You can also use custom colors. <br />
 `python holecmm.py -i hole-surface-dots.dat -o kcsa.cmm -r 0.2 -c1 FF6347 -c2 90EE90 -c3 6495ED`
