@@ -36,7 +36,7 @@ endrad 10.                      ! This is the pore radius that is taken as where
 4. Run the holecmm.py script to generate a .cmm file. In this example custom colors are used for the different pore diameters. <br />
 `python holecmm.py -i dotsurface-kcsa.vmd_plot -o kcsa.cmm -r 0.2 -c1 FF6347 -c2 90EE90 -c3 6495ED`
 
-
+![alt text](https://github.com/joelmeyerson/hole-cmm/blob/main/hole/kcsa-hole.png?raw=true)
 
 ### Example using HOLE in Coot
 
