@@ -1,4 +1,4 @@
-Python script to generate a Chimera marker file (.cmm) using the output from the standalone version of HOLE or the Coot implementation of HOLE. The marker file can be opened in Chimera or ChimeraX to visualize the HOLE output. The script has options to customize coloring and sphere size.
+Hole-CMM is a Python script to generate a Chimera marker file (.cmm) using the output from the standalone version of HOLE or the Coot implementation of HOLE. The marker file can be opened in Chimera or ChimeraX to visualize the HOLE output. The script has options to customize coloring and sphere size.
 
 Links: <br />
 [HOLE homepage](http://www.holeprogram.org/) <br />
